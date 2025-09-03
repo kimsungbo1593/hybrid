@@ -47,31 +47,31 @@ cd myApp
 cordova platform add android
 cordova build android
 
-4️⃣ 앱 UI 구성 (HTML/CSS)
+### 4️⃣ 앱 UI 구성 (HTML/CSS)
 
 index.html 편집
 
 모바일 레이아웃 구성
 
-5️⃣ JavaScript를 활용한 앱 로직
+### 5️⃣ JavaScript를 활용한 앱 로직
 
 DOM 조작
 
 이벤트 처리
 
-6️⃣ Cordova 플러그인 사용하기
+### 6️⃣ Cordova 플러그인 사용하기
 
 기본 장치 기능 연동 (예: 카메라, 위치, 파일 시스템)
 
 cordova plugin add cordova-plugin-camera
 
-7️⃣ 앱 테스트 및 디버깅
+### 7️⃣ 앱 테스트 및 디버깅
 
 에뮬레이터 실행
 
 Android 기기 연결 테스트
 
-8️⃣ 앱 패키징 및 배포
+### 8️⃣ 앱 패키징 및 배포
 
 APK 생성
 
