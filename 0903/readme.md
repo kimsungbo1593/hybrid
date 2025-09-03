@@ -46,6 +46,7 @@ cordova create myApp com.example.myapp MyApp
 cd myApp
 cordova platform add android
 cordova build android
+```
 
 ### 4️⃣ 앱 UI 구성 (HTML/CSS)
 
