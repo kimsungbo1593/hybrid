@@ -15,3 +15,5 @@ HTML과 CSS를 활용하여 자기소개, 학력/경력, 그리고 외부 링크
   - 반응형(기본적인 레이아웃 대응)
 - **참조 링크**
   - GitHub, 개인 링크 등 연결
+
+<img width="535" height="505" alt="Image" src="https://github.com/user-attachments/assets/c88fbdca-6ad8-4edd-9989-510a3f9b494b" />
