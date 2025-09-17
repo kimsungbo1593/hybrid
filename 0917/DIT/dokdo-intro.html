@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>동의과학대학교 앱</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="symbolLogo.png" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">학교 소개</a></li>
+				<li><a href="#movie" data-rel="dialog">홍보 영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">교가</a></li>
+				<li><a href="#gallery">학교 갤러리</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>동의과학대학교 컴퓨터 소프트웨어과_김성보</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>학교 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="logo.png">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>총장 인사말</h3>
+					<p>'학력 간 역전 현상'이 대대적으로 시작된 바,
+						이는 '간판보다 실리', '학력보다 능력'이라는 전 세계적 흐름입니다.
+						이처럼 취업률과 임금 수준에서 나타나고 있는 학력파괴 현상은 ‘우리 사회가 그만큼 성숙하기 시작했다는 것’, ‘우리 사회의 고질적 문제 중 하나였던 학력 중심 문화가 무너지기 시작했다는 것’을 말해주고 있습니다.<br>
+						그 증거로 무조건 일반대학을 선택하던 수험생들이 취업하기가 용이한 전문대학으로 발길을 돌리고 있고, 수많은 대학들이 살아남기 위해 앞다투어 대대적인 변화를 추구하고 있습니다.<br>
+						미래는 전문가의 시대라고 합니다. 학자보다 테크니션이 대우받는 시대입니다. 기술이 가장 큰 힘이 되는 미래, 전문자격증이 가장 든든한 명함이 되는 미래를 동의과학대학교에서 준비하십시오. 일류 전문기술인으로 가는 가장 빠른 길, 동의과학대학교가 열어놓고 있겠습니다.</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>건학정신 - 동의지천</h3>
+					<p>동의는 새로운 도덕관, 바르고 참된 뜻을 펼치는 학문하는 곳이며, 지천은 군자가 걸어야 할 지상의 목표를 뜻한다.<br>
+						본 대학은 동의학원 설립자인 故 석당 김임식 박사의 학원설립 이념인 '동의지천(東義知天)'에 바탕을 두고 있다.<br>'동의(東義)'와 '지천(知天)'은 동의과학대학교가 지향해야 할 대명제이자 교육 지표로서 동의학원의 설립이념이자 건학정신이라고 할 수 있다.</p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>개교 역사</h3>
+					<p>1966년 10월 22일 이곳 부산진구 전포동 · 양정동 일원의 유서깊은 황령산 기슭 6만여 평의 부지에 '동의지천의 건학기념' 을 바탕으로 학교법인 동의학원을 설립하고 동의중학교, 동의공업고등학교를 운영하여오던 바,<br>
+						미래 산업사회를 선도해 나갈 전문기술인의 효율적인 수급과 산업사회가 요구하는 전문직업인의 양성을 목적으로 1972년 12월 14일 동의전문학교의 설립인가를 얻어 창의, 성실, 협동을 학훈으로 1973년 3월에 개교하였다.</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>동의과학대학교 컴퓨터 소프트웨어과_김성보</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>홍보 영상</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-a">취업과 창업의 명문, 동의과학대학교</div><br/>
+			<li><iframe width="100%" height="240" src="http://www.youtube.com/embed/PENKG3C5j2A"></iframe></li><br/>
+			<div class="ui-bar ui-bar-a">2024 공식 홍보 영상</div><br/>
+			<li><iframe width="100%" height="600" src="http://www.youtube.com/embed/nAOCy9xraZs"></iframe></li><br/>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>교가</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">교가</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="song.mp3" type="audio/mp3">
+			</audio>	
+			<img src="song.png" alt="" width="100%">
+		</div>
+	</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>학교 갤러리</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="4-1.jpg" rel="external"><img src="4-1.jpg" /></a></li>	
+				<li><a href="4-2.jpg" rel="external"><img src="4-2.jpg" /></a></li>	
+				<li><a href="4-3.jpg" rel="external"><img src="4-3.jpg" /></a></li>	
+				<li><a href="4-4.jpg" rel="external"><img src="4-4.jpg" /></a></li>	
+				<li><a href="4-5.jpg" rel="external"><img src="4-5.jpg" /></a></li>	
+				<li><a href="4-6.jpg" rel="external"><img src="4-6.jpg" /></a></li>	
+				<li><a href="4-7.jpg" rel="external"><img src="4-7.jpg" /></a></li>	
+				<li><a href="4-8.jpg" rel="external"><img src="4-8.png" /></a></li>	
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>동의과학대학교 컴퓨터 소프트웨어과_김성보</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
