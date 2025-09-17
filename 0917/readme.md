@@ -16,4 +16,4 @@ HTML과 CSS를 활용하여 자기소개, 학력/경력, 그리고 외부 링크
 - **참조 링크**
   - GitHub, 개인 링크 등 연결
 
-<img width="535" height="505" alt="Image" src="https://github.com/user-attachments/assets/c88fbdca-6ad8-4edd-9989-510a3f9b494b" />
+<img width="533" height="436" alt="Image" src="https://github.com/user-attachments/assets/ed3dbfb7-3c74-46f5-8d17-de2e31b4e103" />
