@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>LG전자 소개</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+    body {
+        /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+        background: linear-gradient(135deg, #F0ECE4 0%, #FFFFFF 100%);
+    }
+    
+    /* 헤더 스타일 */
+    .ui-header {
+        background: linear-gradient(135deg, #FD312E 0%, #A50034 100%) !important;
+        border: none !important;
+        box-shadow: 0 2px 10px rgba(253, 49, 46, 0.3);
+    }
+    
+    .ui-header h1 {
+        color: #FFFFFF !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    }
+    
+    /* 푸터 스타일 */
+    .ui-footer {
+        background: linear-gradient(135deg, #A50034 0%, #000000 100%) !important;
+        border: none !important;
+    }
+    
+    .ui-footer h1 {
+        color: #FFFFFF !important;
+        font-size: 1em;
+        letter-spacing: 2px;
+    }
+    
+    /* 콘텐츠 영역 */
+    .ui-content {
+        background-color: #F0ECE4 !important;
+    }
+    
+    /* 리스트뷰 스타일 */
+    .ui-listview > li a {
+        background: #FFFFFF !important;
+        border: 2px solid #FD312E !important;
+        color: #000000 !important;
+        margin: 10px 0;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+    
+    .ui-listview > li a:hover {
+        background: linear-gradient(135deg, #FD312E 0%, #A50034 100%) !important;
+        color: #FFFFFF !important;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(253, 49, 46, 0.4);
+    }
+    
+    /* 버튼 스타일 */
+    .ui-btn {
+        background: #FD312E !important;
+        border: none !important;
+        color: #FFFFFF !important;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .ui-btn:hover {
+        background: #A50034 !important;
+        transform: scale(1.05);
+    }
+    
+    /* Collapsible 스타일 */
+    .ui-collapsible-heading a {
+        background: linear-gradient(135deg, #FD312E 0%, #A50034 100%) !important;
+        color: #FFFFFF !important;
+        border-radius: 10px;
+        margin: 5px 0;
+    }
+    
+    .ui-collapsible-content {
+        background: #FFFFFF !important;
+        border: 2px solid #F0ECE4 !important;
+        border-radius: 10px;
+        padding: 15px;
+        color: #000000;
+    }
+    
+    /* 바 스타일 */
+    .ui-bar-a {
+        background: linear-gradient(135deg, #A50034 0%, #FD312E 100%) !important;
+        color: #FFFFFF !important;
+        border-radius: 8px;
+        padding: 12px;
+        box-shadow: 0 2px 8px rgba(165, 0, 52, 0.3);
+    }
+    
+    /* 리스트 스타일 */
+    li { 
+        list-style: none; 
+    }
+    
+    .picture { 
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+        background: #FFFFFF;
+        border-radius: 15px;
+        padding: 10px;
+    }
+    
+    .picture li { 
+        float: left; 
+        width: 50%;
+    }
+    
+    .picture li a {
+        display: block; 
+        margin: 5px; 
+        border: 1px;
+    }
+    
+    .picture li img { 
+        display: block; 
+        width: 50%;  
+        height: auto;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .picture li img:hover { 
+        display: block; 
+        width: 100%;  
+        height: auto;
+        transform: scale(1.02);
+        box-shadow: 0 5px 20px rgba(253, 49, 46, 0.3);
+    }
+    
+    /* 이미지 컨테이너 */
+    .image-container {
+        background: #FFFFFF;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin: 10px 0;
+    }
+    
+    /* 비디오 컨테이너 */
+    iframe {
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* YouTube 프로필 이미지 */
+    .youtube-profile {
+        transition: all 0.3s ease;
+    }
+    
+    .youtube-profile:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 20px rgba(253, 49, 46, 0.4);
+    }
+    
+    /* 페이지 배경 */
+    .ui-page {
+        background: #F0ECE4 !important;
+    }
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+            <h1>LG전자 소개 앱</h1>
+        </div>
+        <div data-role="content" style="text-align:center">
+            <div class="image-container">
+                <a href="https://www.lge.co.kr/company/main" target="_blank">
+                    <img src="lg_main.png" width="50%">
+                </a>
+            </div>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#intro">LG전자 소개</a></li>
+                <li><a href="#movie" data-rel="dialog">LG전자 영상</a></li>
+                <li><a href="#wizard3-1" data-rel="dialog">LG전자 채용</a></li>
+                <li><a href="#gallery">LG전자 갤러리</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Life's Good</h1>
+        </div>
+    </div>
+    <!------------------------------------------------------------->
+    <div data-role="page" id="intro" data-theme="b">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>            
+            <h1>LG전자 소개</h1>
+        </div>
+        <div data-role="content">
+            <div style="text-align:center" class="image-container">
+                <img src="lg_main.png" width="30%">
+            </div>            
+            <div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+                <div data-role="collapsible" data-collapsed="false">
+                    <h3>LG전자 역사</h3>
+                    <p>
+                        LG전자는 1958년 금성사로 창립하여 대한민국 전자산업의 역사를 이끌어왔습니다. 국내 최초로 라디오, TV, 냉장고 등을 생산하며 국가 경제 발전에 기여했습니다.<br><br>
+                        1995년 금성사에서 LG전자로 사명을 변경하고 글로벌 시장에 본격 진출하였습니다. 이후 디지털 기술과 프리미엄 가전 분야에서 두각을 나타내며 세계적인 전자기업으로 성장했습니다.<br><br>
+                        현재 LG전자는 지속 가능한 혁신과 고객 중심의 가치를 바탕으로 글로벌 가전 및 전자 산업을 선도하고 있습니다.
+                    </p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>사업 분야</h3>
+                    <p>
+                        H&A(Home Appliance & Air Solution)<br> 
+                        생활가전 및 에어솔루션 사업 부문으로, 냉장고, 세탁기, 건조기, 에어컨, 공기청정기, 청소기 등 다양한 가전제품을 제조 및 판매합니다.<br>
+                        프리미엄 브랜드인 LG Signature와 AI 기반 LG 씽큐(ThinQ) 제품들이 대표적입니다.<br><br>
+                    
+                        HE(Home Entertainment)<br> 
+                        TV 및 오디오 제품을 중심으로 한 홈 엔터테인먼트 사업 부문입니다.
+                        세계 최고 수준의 OLED TV, QNED TV, 사운드바 등을 생산하며, 스마트 기능 및 콘텐츠 플랫폼도 강화하고 있습니다.<br><br>
+                    
+                        BS(Business Solutions)<br> 
+                        상업용 디스플레이, 태양광 모듈, IT 솔루션(모니터, 노트북 등)을 제공하는 사업 부문입니다.
+                        디지털 사이니지, LED 사이니지 등 B2B 솔루션 강화에 집중하고 있습니다.
+                    </p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>LG Way</h3>
+                    <p>
+                        LG Way는 LG 고유의 경영철학이자, LG 전 임직원이 지키고 실천해야 할 사고와 행동의 기반입니다.<br><br>
+                        LG Way는 경영이념인 '고객을 위한 가치창조'와 '인간존중의 경영'을 LG의 행동방식인 '정도경영'으로 실천함으로써 LG의 비전인 '일등LG'를 달성하자는 것입니다.
+                    </p>
+                    <div class="image-container">
+                        <img src="lgway.png" width="50%">
+                    </div>
+                </div>
+                <div data-role="collapsible">
+                    <h3>경영이념</h3>
+                    <p>
+                        LG의 경영이념은 기업활동의 목적인 '고객을 위한 가치창조'와 회사 운영 원칙인 '인간존중의 경영' 입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Life's Good</h1>
+        </div>        
+    </div>
+    <!------------------------------------------------------------->
+    <div data-role="page" id="movie" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+            <h1>LG전자 영상</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-a">LG전자 : 공간과 미래를 연결하다</div><br/>
+            <li><iframe width="100%" height="650" src="lg_video.mp4"></iframe></li><br/>
+
+            <div class="ui-bar ui-bar-a">LG전자 채널</div><br/>
+            <li style="text-align: center;">
+                <a href="https://www.youtube.com/@LGElectronicsKorea" target="_blank">
+                    <img src="youtube_profile.jpg" class="youtube-profile" style="width: 150px; border-radius: 50%;">
+                </a>
+            </li>
+        </div>
+        <div data-role="footer" data-theme="b">
+        </div>
+    </div>
+     <!------------------------------------------------------------->
+    <div data-role="page" id="wizard3-1">
+        <div data-role="header">
+            <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+            <h1>LG전자 채용</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-a">※취준생 필수 시청※ 지원하기 전에 이 영상부터 보세요🔥 | 리쿠르터 등판 EP.01 | 우리가 엘려주지</div><br/>
+            <li><iframe width="100%" height="650" src="https://www.youtube.com/embed/4l-RAeanSzg"></iframe></li><br/>
+
+            <div class="ui-bar ui-bar-a">LG전자 채용</div><br/>
+            <li style="text-align: center;">
+                <a href="https://www.youtube.com/@lge-careers" target="_blank">
+                    <img src="youtube_profile2.jpg" class="youtube-profile" style="width: 150px; border-radius: 50%;">
+                </a>
+            </li>
+        </div>
+    </div>
+     <!------------------------------------------------------------->
+    <div data-role="page" id="gallery" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+            <h1>LG전자 갤러리</h1>
+        </div>
+        <div data-role="content">
+            <ul class="picture">
+                <li><img src="1.jpeg" /></a></li>    
+                <li><img src="2.jpg" /></a></li>    
+                <li><img src="3.jpeg" /></a></li>    
+                <li><img src="4.jpg" /></a></li>    
+                <li><img src="5.jpeg" /></a></li>    
+                <li><img src="6.jpg" /></a></li>    
+                <li><img src="7.jpg" /></a></li>    
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Life's Good</h1>
+        </div>        
+    </div>
+</div>    
+</body>
+</html>
