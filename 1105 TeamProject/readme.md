@@ -1,3 +1,10 @@
+# 안드로드 팀 프로젝트
+
+# 팀원 - 김성보, 공민승, 이현규
+
+## 주제 : 10,000명 이상을 만족시키는 웹앱
+### 삼진어묵 홍보 웹앱
+
 <img width="381" height="826" alt="Image" src="https://github.com/user-attachments/assets/e7a19c43-81d2-479d-9051-72b093c6d7fe" />
 
 <img width="381" height="825" alt="Image" src="https://github.com/user-attachments/assets/49730eaf-26ad-452b-b9de-51c9bfa69cbc" />
