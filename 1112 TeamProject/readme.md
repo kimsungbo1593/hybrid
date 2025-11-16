@@ -211,3 +211,15 @@ Apache-2.0 License
 - 김성보 : 프롬프트, api 및 앱 제작
 - 이현규 : PPT 및 발표
 - 허윤 : 코드 추가수정, 플러그인 추가, 기능 점검
+
+#### 실행 사진
+
+![Image](https://github.com/user-attachments/assets/9231888a-461f-4d90-a9f4-1b8ca426f7dd)
+
+![Image](https://github.com/user-attachments/assets/18232a51-0c7b-4d46-9d91-59dde3a1a81b)
+
+![Image](https://github.com/user-attachments/assets/59ab3690-ee46-4513-8580-95e70fe6e22f)
+
+![Image](https://github.com/user-attachments/assets/249f255b-221a-4af0-8b33-d4ca1073f497)
+
+![Image](https://github.com/user-attachments/assets/302501ba-a087-403a-bc7e-e7213fd39c32)
