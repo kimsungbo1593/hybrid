@@ -1,0 +1,50 @@
+1. D-Day 카운터
+결혼식 날짜(2025-12-25) 기준으로 남은 일수, 당일, 경과 일수 자동 계산 및 표시.
+
+자바스크립트 Date 객체를 사용하여 계산 및 화면 업데이트.
+
+2. 내비게이션 앱 연동 (지도 연결)
+네이버 지도, 카카오 지도, 구글 지도 버튼 제공.
+
+웹 실행 시: 새 브라우저 탭에서 지도 열기.
+
+앱(Cordova) 실행 시: window.open(url, '_system') 코드를 통해 시스템 앱 강제 호출.
+
+3. PWA 설치 및 웹 접근성
+manifest.json 파일로 앱 정보 정의 (이름, 아이콘, 테마 색상).
+
+service-worker.js 파일로 오프라인 캐싱 기능 구현 (Cache First 전략).
+
+beforeinstallprompt 이벤트 감지 후 설치 유도 배너 표시 (Cordova 환경에서는 자동 숨김).
+
+설치 후 인터넷 주소창 없는 풀 스크린 실행.
+
+4. Android 풀 기능 앱 다운로드 (APK)
+PWA 웹 버전에서 APK 설치 파일 직접 다운로드 버튼 제공.
+
+Google Drive 다이렉트 다운로드 링크 (https://drive.google.com/uc?export=download&id=...) 연결.
+
+앱 설치 후 알림 설정, QR 스캔 등 네이티브 기능 사용 가능.
+
+5. 결혼식 알림 설정 (네이티브 기능)
+Cordova 앱에서만 활성화.
+
+cordova-plugin-local-notification 플러그인 사용.
+
+사용자 지정 날짜/시간 선택기 (cordova-plugin-datepicker 사용)를 통해 알림 시간 예약 및 취소.
+
+예약된 알림 시간 및 상태 화면에 표시.
+
+6. 식권 QR 스캔 (네이티브 기능)
+Cordova 앱에서만 활성화.
+
+cordova-plugin-camera 플러그인을 사용하여 카메라 기능 호출 (참석 확인 시뮬레이션).
+
+7. 기술 스택 및 환경
+기술 스택: HTML5, Tailwind CSS, FontAwesome.
+
+폰트: Noto Sans KR, Noto Serif KR.
+
+앱 분기 처리: !!window.cordova 변수(isCordova)로 웹/앱 환경 감지.
+
+필수 Cordova 플러그인: cordova-plugin-local-notification, cordova-plugin-camera, cordova-plugin-inappbrowser, cordova-plugin-datepicker (최종 로직 반영).
