@@ -6,6 +6,9 @@ Claude를 활용한 하이브리드 앱입니다.
 
 **Developed by Team AndRod** 🚀
 
+## flow 링크
+https://team-0a0uj8.flow.team/main.act?task
+
 ---
 
 **⚠️ 주의**: 이 프로젝트는 교육 및 학습 목적의 애플리케이션입니다.
