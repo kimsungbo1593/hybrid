@@ -1,0 +1,55 @@
+📱 앱 개요: WeatherFit (나만의 날씨 기반 코디 추천)
+1. 핵심 컨셉
+사용자의 현재 위치와 실시간 날씨를 분석하여, 사용자가 직접 등록한 '나만의 옷장' 데이터 중에서 최적의 옷차림(상의+아우터 조합)을 추천해 주는 스마트 스타일링 앱입니다.
+
+2. 주요 기능 상세 (Key Features)
+① 위치 기반 실시간 날씨 (Location & Weather)
+GPS 연동: 스마트폰의 GPS(navigator.geolocation)를 사용하여 사용자의 현재 위도/경도를 자동으로 파악합니다.
+
+OpenWeatherMap API: 획득한 좌표를 API에 전송하여 현재 기온, 날씨 상태(맑음/흐림 등), 최고/최저 기온을 실시간으로 받아와 화면에 표시합니다.
+
+위치 권한 제어: 사용자가 위치 권한을 거부할 경우, 기본 지역(서울) 날씨를 보여주는 예외 처리가 되어 있습니다.
+
+② 개인화 맞춤 코디 추천 (Smart Recommendation)
+온도별 알고리즘: 현재 기온에 따라 4단계로 분류하여 옷차림 전략을 결정합니다.
+
+23°C 이상: 반팔 (아우터 제외)
+
+15°C ~ 22°C: 반팔 + 얇은 아우터(가디건 등)
+
+5°C ~ 14°C: 긴팔 + 자켓
+
+5°C 미만: 니트 + 겨울 코트
+
+랜덤 매칭 시스템: 단순히 텍스트만 보여주는 것이 아니라, 사용자의 옷장 데이터(LocalStorage)에서 해당 카테고리(Top, Outer)의 옷을 무작위로 꺼내와 매칭합니다.
+
+시각적 추천: 옷의 이름뿐만 아니라 사용자가 등록한 **색상(Color)**을 박스 형태로 시각화하여 직관적으로 보여줍니다.
+
+③ 디지털 옷장 관리 (My Closet)
+옷 등록 (Create): 옷 이름, 카테고리(Outer/Top/Bottom), 색상(Color Picker)을 입력하여 옷장에 추가합니다.
+
+데이터 영구 저장 (Persistence): 별도의 서버 없이 localStorage 기술을 활용하여, 앱을 종료하거나 폰을 껐다 켜도 데이터가 사라지지 않고 유지됩니다.
+
+카테고리 필터링 (Read): All, Outer, Top, Bottom 버튼을 통해 보고 싶은 종류의 옷만 모아볼 수 있습니다.
+
+상세 보기 및 삭제 (Delete): 리스트의 옷을 클릭하면 상세 정보를 팝업(Modal)으로 띄우고, 삭제할 수 있습니다.
+
+④ 사용자 경험 최적화 (UX/UI)
+자동 예시 데이터: 앱을 처음 설치하여 데이터가 없는 경우, 텅 빈 화면 대신 '기본 예시 옷(Default Items)' 6벌을 자동으로 생성하여 사용자가 앱의 기능을 바로 이해할 수 있도록 돕습니다.
+
+탭 네비게이션: 하단 탭바를 통해 [홈 화면]과 [옷장 화면]을 부드럽게 전환합니다.
+
+3. 적용 기술 (Tech Stack)
+Platform: Apache Cordova (Hybrid App)
+
+Language: HTML5, CSS3, JavaScript (Vanilla JS)
+
+External API: OpenWeatherMap API (Weather Data)
+
+Storage: Browser LocalStorage (No-SQL Client-side Storage)
+
+Plugin:
+
+cordova-plugin-geolocation (위치 정보)
+
+cordova-plugin-whitelist (네트워크 통신 허용)

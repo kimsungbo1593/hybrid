@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherFit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <section id="home-screen" class="screen active">
+        <div class="weather-bg">
+            <div class="header">
+                <h1>WeatherFit</h1>
+                <p><i class="fas fa-map-marker-alt"></i> <span id="city-name">Busan, KR</span></p>
+            </div>
+    
+            <div class="weather-info">
+                <div class="temp" id="current-temp">--°</div>
+                <div class="status" id="weather-status">Loading...</div>
+                <div class="range" id="temp-range">H: --° L: --°</div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="alert-box">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>오늘 일교차가 커요! 겉옷을 챙기세요.</span>
+            </div>
+
+            <h3 class="section-title">추천 의상</h3>
+            
+            <div class="outfit-combination">
+                <div class="combo-item" id="recommend-inner">
+                    <div class="combo-color-box" style="background-color: #ddd;"></div> 
+                    <span>상의 없음</span>
+                </div>
+    
+                <div class="plus-sign">+</div>
+    
+                <div class="combo-item" id="recommend-outer">
+                    <div class="combo-color-box" style="background-color: #ddd;"></div>
+                    <span>아우터 없음</span>
+                </div>
+            </div>
+
+            <p class="combo-desc">날씨 데이터를 불러오는 중...</p>
+
+            <p class="combo-desc">일교차에 대비해 얇은 겉옷을 걸치세요.</p>
+        </div>
+    </section>
+
+    <section id="closet-screen" class="screen">
+        <div class="closet-header">
+            <h2>내 옷장</h2>
+            <button class="add-btn" onclick="showAddScreen()">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <div class="filter-scroll">
+            <button class="chip active" onclick="filterCloset(this, 'all')">모든 옷</button>
+            <button class="chip" onclick="filterCloset(this, 'outer')">아우터</button>
+            <button class="chip" onclick="filterCloset(this, 'top')">상의</button>
+            <button class="chip" onclick="filterCloset(this, 'bottom')">하의</button>
+        </div>
+
+        <p class="count-text">10 개</p>
+
+        <div class="closet-grid"></div>
+    </section>
+
+    <section id="add-screen" class="screen">
+        <div class="add-header">
+            <button class="back-btn" onclick="hideAddScreen()"><i class="fas fa-chevron-left"></i></button>
+            <h2>의상 추가</h2>
+            <div style="width: 24px;"></div> </div>
+
+        <div class="form-container">
+            <label class="input-label">이름</label>
+            <input type="text" class="text-input" placeholder="e.g., Blue Denim Jacket">
+
+            <label class="input-label">카테고리</label>
+            <div class="category-options">
+                <button class="option-btn" onclick="selectOption(this, 'category')">아우터</button>
+                <button class="option-btn" onclick="selectOption(this, 'category')">상의</button>
+                <button class="option-btn" onclick="selectOption(this, 'category')">하의</button>
+            </div>
+
+            <label class="input-label">색</label>
+            <div class="color-picker-wrapper">
+                <input type="color" id="colorPickerInput" value="#4FA4F4" onchange="updateColorDisplay(this)">
+    
+                <label for="colorPickerInput" class="color-display" id="colorDisplayBtn">
+                    <span id="colorHexText">#4FA4F4</span>
+                    <i class="fas fa-palette"></i>
+                </label>
+                <p class="hint-text" style="margin-top:5px;">🎨 모든 색</p>
+            </div>
+
+            <label class="input-label">두께 <span style="font-weight:400; color:#888; font-size:12px;"></span></label>
+            <div class="segmented-control">
+                <button class="segment-btn" onclick="selectSegment(this)">얇음</button>
+                <button class="segment-btn active" onclick="selectSegment(this)">보통</button>
+                <button class="segment-btn" onclick="selectSegment(this)">두꺼움</button>
+            </div>
+
+            <div class="spacer" style="height: 100px;"></div>
+        </div>
+
+        <div class="bottom-action">
+            <button class="save-btn" onclick="saveItem()">의상 저장</button>
+        </div>
+    </section>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active" onclick="switchTab('home')">
+            <i class="fas fa-home"></i>
+            <span>메인</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('closet')">
+            <i class="fas fa-shopping-bag"></i>
+            <span>옷장</span>
+        </div>
+    </nav>
+
+    <div id="detail-modal" class="modal-overlay" onclick="closeDetailModal(event)">
+    <div class="modal-content">
+        <h3 id="modal-name">옷 이름</h3>
+        <p id="modal-category" style="color:#888; font-size:14px; margin-bottom:15px;">카테고리</p>
+        
+        <div id="modal-color-preview" style="width:60px; height:60px; border-radius:50%; margin:0 auto 20px; box-shadow:0 4px 10px rgba(0,0,0,0.1);"></div>
+
+        <div class="modal-actions">
+            <button class="delete-btn" onclick="deleteCurrentItem()">
+                <i class="fas fa-trash"></i> 삭제하기
+            </button>
+            <button class="close-btn" onclick="closeDetailModal(null)">닫기</button>
+        </div>
+    </div>
+    </div>
+
+    
+    <script src="cordova.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
